@@ -31,48 +31,40 @@
         <section class="generator-container">
             <div class="controls-container">
                 <h3>Generator Controls</h3>
-                
-                <div class="control-group">
-                    <label for="grid-size">Grid Size:</label>
-                    <select id="grid-size">
-                        <option value="10">10 x 10</option>
-                        <option value="15">15 x 15</option>
-                        <option value="20">20 x 20</option>
-                        <option value="25">25 x 25</option>
-                    </select>
-                </div>
-                
-                <div class="control-group">
-                    <label>Color Palette:</label>
-                <div class="color-palette">
-                        <div class="color-item" style="background-color: #1E4D2B;" data-color="#1E4D2B"></div>
-                        <div class="color-item" style="background-color: #C8C372;" data-color="#C8C372"></div>
-                        <div class="color-item" style="background-color: #93D0AC;" data-color="#93D0AC"></div>
-                        <div class="color-item" style="background-color: #486b55;" data-color="#486b55"></div>
-                        <div class="color-item" style="background-color: #F26322;" data-color="#F26322"></div>
-                        <div class="color-item custom-color">
-                            <input type="color" id="custom-color" value="#000000">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <label for="pattern-type">Pattern Type:</label>
-                    <select id="pattern-type">
-                        <option value="random">Random</option>
-                        <option value="checkerboard">Checkerboard</option>
-                        <option value="spiral">Spiral</option>
-                        <option value="custom">Custom Pattern</option>
-                    </select>
-                </div>
 
+                <form action="script.js">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="rows">Rows:</label>
+                                <input type="number" id="rows" name="rows" min="1" max="1000">
+                            </td>
+                            <td>
+                                <label for="cols" class="cols">Columns:</label>
+                                <input type="number" class="cols" id="cols" name="cols" min="1" max="702">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="colors">Colors:</label>
+                                <input type="number" id="colors" name="colors" min="1" max="10"><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit" id="submit-btn" class="cta-button"><br>
+                </form>
+                
                 <div class="control-group">
-                    <label for="show-coordinates">Show Coordinates:</label>
-                    <input type="checkbox" id="show-coordinates" checked>
+                    <table>
+                        <tr>
+                            <td><label for="show-coordinates">Show Coordinates:</label></td>
+                            <td><input type="checkbox" id="show-coordinates" checked></td>
+                        </tr>
+                    </table>
                 </div>
                 
                 <button id="generate-btn" class="cta-button">Generate Coordinate Sheet</button>
-                <button id="download-btn" class="secondary-button">Download</button>
+                <button id="print-btn" class="secondary-button">Print</button>
             </div>
             
             <div class="preview-container">
