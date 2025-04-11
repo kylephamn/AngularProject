@@ -6,6 +6,7 @@
     <title>Team 14 | Color Coordinate Generator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -29,10 +30,10 @@
         </section>
 
         <section class="generator-container">
-            <div class="controls-container">
+            <div class="controls-container" id="controls-container">
                 <h3>Generator Controls</h3>
 
-                <form action="script.js">
+                <form onsubmit="createTable()">
                     <table>
                         <tr>
                             <td>
@@ -51,7 +52,8 @@
                             </td>
                         </tr>
                     </table>
-                    <input type="submit" value="Submit" id="submit-btn" class="cta-button"><br>
+                    <input type="submit" value="Submit" id="submit-btn" class="cta-button">
+                    <br>
                 </form>
                 
                 <div class="control-group">
@@ -70,7 +72,7 @@
             <div class="preview-container">
                 <h3>Preview</h3>
                 <div id="coordinate-preview">
-                    <div class="placeholder-text">Your color coordinate sheet will appear here.</div>
+                    <div id="placeholder-text" class="placeholder-text">Your color coordinate sheet will appear here.</div>
                     <div id="grid-container" class="hidden"></div>
                 </div>
             </div>
