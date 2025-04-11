@@ -534,3 +534,12 @@ footer {
         height: auto;
     }
 }
+
+.color-tbl {
+    border: 1px solid;
+}
+
+.left-col {
+    width: 20%;
+    border: 1px solid;
+}
