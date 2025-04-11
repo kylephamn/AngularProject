@@ -1,9 +1,13 @@
 function createTable() {
+    if (document.getElementById("colors-tbl") != null) {
+        document.getElementById("colors-tbl").remove();
+    }
     const container = document.getElementById("controls-container");
     const rows = document.getElementById("colors").value;
     const cols = 2;
     const tbl = document.createElement('table');
     tbl.className += "color-tbl";
+    tbl.id = "colors-tbl";
 
     for (let i = 0; i < rows; i++) {
         var tr = tbl.insertRow();
